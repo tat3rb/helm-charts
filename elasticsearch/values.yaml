@@ -23,7 +23,7 @@ roles:
 
 replicas: 3
 minimumMasterNodes: 2
-
+singleNode: true
 esMajorVersion: ""
 
 # Allows you to add any config files in /usr/share/elasticsearch/config/
@@ -91,12 +91,12 @@ labels: {}
 esJavaOpts: "" # example: "-Xmx750m -Xms750m"
 
 resources:
-  requests:
-    cpu: "1000m"
-    memory: "2Gi"
+    requests:
+    memory: "100Mi"
+    cpu: "10m"
   limits:
-    cpu: "1000m"
-    memory: "2Gi"
+    memory: "250Mi"
+    cpu: "800m"
 
 initResources: {}
 # limits:
@@ -112,7 +112,7 @@ volumeClaimTemplate:
   accessModes: ["ReadWriteOnce"]
   resources:
     requests:
-      storage: 30Gi
+      storage: 20Gi
 
 rbac:
   create: false
@@ -175,7 +175,7 @@ antiAffinityTopologyKey: "kubernetes.io/hostname"
 
 # Hard means that by default pods will only be scheduled if there are enough nodes for them
 # and that they will never end up on the same node. Setting this to soft will do this "best effort"
-antiAffinity: "hard"
+antiAffinity: "soft"
 
 # This is the node affinity settings as defined in
 # https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#node-affinity-beta-feature
