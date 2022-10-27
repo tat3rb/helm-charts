@@ -91,12 +91,12 @@ labels: {}
 esJavaOpts: "" # example: "-Xmx750m -Xms750m"
 
 resources:
-    requests:
-    memory: "100Mi"
-    cpu: "10m"
+  requests:
+    cpu: "1000m"
+    memory: "750m"
   limits:
-    memory: "250Mi"
-    cpu: "800m"
+    cpu: "1000m"
+    memory: "750m"
 
 initResources: {}
 # limits:
