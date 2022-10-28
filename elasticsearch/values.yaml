@@ -87,16 +87,16 @@ podAnnotations: {}
 # additionals labels
 labels: {}
 
-#esJavaOpts: "" # example: "-Xmx1g -Xms1g"
-esJavaOpts: "" # example: "-Xmx750m -Xms750m"
+esJavaOpts: "" # example: "-Xmx1g -Xms1g"
+#esJavaOpts: "" # example: "-Xmx750m -Xms750m"
 
 resources:
   requests:
     cpu: "1000m"
-    memory: "750m"
+    memory: "1g"
   limits:
     cpu: "1000m"
-    memory: "750m"
+    memory: "1g"
 
 initResources: {}
 # limits:
