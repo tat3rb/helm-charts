@@ -93,10 +93,10 @@ esJavaOpts: "" # example: "-Xmx1g -Xms1g"
 resources:
   requests:
     cpu: "1000m"
-    memory: "1g"
+    memory: "1Gi"
   limits:
     cpu: "1000m"
-    memory: "1g"
+    memory: "1Gi"
 
 initResources: {}
 # limits:
